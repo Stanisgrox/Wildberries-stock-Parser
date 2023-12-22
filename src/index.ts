@@ -10,6 +10,7 @@ const WarehouseName = 'Казань WB'
 /* Главная функция */
 async function getStock() {
 
+    /* Создание инстанса браузера */
     const browser = await launch({
         headless: false,
     });
@@ -60,5 +61,7 @@ async function getStock() {
 
     return result
 }
+
+/* Запуск приложения */
 
 getStock().then(res => {console.log(res)})
