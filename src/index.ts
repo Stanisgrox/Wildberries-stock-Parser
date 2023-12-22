@@ -29,7 +29,7 @@ async function getStock() {
     /** ID нужного склада */
     const storeId: string = await axios.get(WAREHOUSES).then((res) => res.data.find((store: any) => store.name === WarehouseName).id)
 
-    /* Получить данные о товарах (функцию getArticleData можно вынести отдельно и использовать потом)*/
+    /* Получить данные о товарах (функцию getProductData можно вынести отдельно и использовать потом)*/
     async function getProductData(color: string){
         return await axios.get(DATA_REQUEST + color);
     }
